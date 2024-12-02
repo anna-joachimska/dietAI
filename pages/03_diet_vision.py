@@ -10,7 +10,7 @@ col1, col2 = st.columns([1,2])
 with col1:
     enable_camera = st.checkbox("Enable camera")
     camera_picture = st.camera_input("Take a picture", disabled=not enable_camera)
-    uploaded_picture = st.file_uploader("Upload a picture")
+    uploaded_picture = st.file_uploader("Upload a picture", type=['png', 'jpg'])
 
 
 with col2:
