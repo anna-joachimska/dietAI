@@ -64,7 +64,6 @@ def get_recipe(calories, dish_name, recipe_type):
     }
 
     response = requests.post(url, headers=headers, data=data)
-    print(response.json()["recipes"]["recipe"]["recipe_id"])
     recipe_id = response.json()["recipes"]["recipe"]["recipe_id"]
     recipe_name = response.json()["recipes"]["recipe"]["recipe_name"]
 
